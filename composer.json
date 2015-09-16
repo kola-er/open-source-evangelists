@@ -12,25 +12,25 @@
   "authors": [
     {
       "name": "Kolawole Erinoso",
-      "email": "kolawole.erinoso@andela.com",
+      "email": "kola.erinoso@gmail.com",
       "role": "Developer"
     }
   ],
-
   "autoload": {
     "psr-4": {
-      "League\\": "src/"
-    }
-  },
-
-  "autoload-dev": {
+      "Kola\\": "src/"
+    },
     "classmap": ["src/"]
   },
-
-  "require": {
-    "php": ">=5.5"
+  "autoload-dev": {
+    "psr-4": {
+      "Kola\\OpenSourceEvangelist\\Test\\": "tests/"
+    }
   },
-
+  "require": {
+    "php": ">=5.5",
+    "squizlabs/php_codesniffer": "^2.3"
+  },
   "require-dev": {
     "phpunit/phpunit": "4.8.*"
   }
