@@ -34,6 +34,8 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
     /**
      * Test for the equality between the expected values and actual values returned by function getStatus()
      *
+     * @param        string $username Username of an individual to be searched for on GitHub
+     * @param        string $response Expected category response
      * @dataProvider supplyUsername
      */
     public function testGetStatusOfEvangelist($username, $response)

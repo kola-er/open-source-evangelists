@@ -32,6 +32,8 @@ class EvangelistFetchTest extends \PHPUnit_Framework_TestCase
     /**
      * Test for the equality between the expected values and actual values returned by function analyse()
 	 *
+	 * @param        string $username Username of an individual to be searched for on GitHub
+	 * @param        int $response Expected number of public repositories
      * @dataProvider supplyValidUsername
      */
     public function testGetStatusOfEvangelist($username, $response)
@@ -55,6 +57,7 @@ class EvangelistFetchTest extends \PHPUnit_Framework_TestCase
     /**
      * Test for throw of Exception if the supplied username is empty or invalid
 	 *
+	 * @param        string $username Username of an individual to be searched for on GitHub
      * @dataProvider supplyInvalidUsername
      * @expectedException Exception
      */
