@@ -13,6 +13,9 @@ namespace Kola\OpenSourceEvangelist\Helper;
 use Kola\OpenSourceEvangelist\Exception\EmptyUsernameException;
 use Kola\OpenSourceEvangelist\Exception\InvalidUsernameException;
 
+define('GITHUB_CLIENT_ID', '513ce061270c479165f3');
+define('GITHUB_CLIENT_SECRET', '0e8fdd973d153045631b0710db2a0339c3d0d90d');
+
 class EvangelistFetch
 {
     /**
@@ -33,7 +36,7 @@ class EvangelistFetch
 
         curl_setopt_array(
             $user, [
-            CURLOPT_URL => 'https://api.github.com/users/' . $username. '?client_id=513ce061270c479165f3&client_secret=0e8fdd973d153045631b0710db2a0339c3d0d90d',
+            CURLOPT_URL => 'https://api.github.com/users/' . $username. '?client_id=' . GITHUB_CLIENT_ID . '&client_secret=' . GITHUB_CLIENT_SECRET,
             CURLOPT_USERAGENT => 'Open-source Evangelist',
             CURLOPT_RETURNTRANSFER => 1
             ]
