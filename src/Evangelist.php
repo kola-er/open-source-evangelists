@@ -41,7 +41,7 @@ class Evangelist
         try {
             $response = EvangelistAnalysis::analyse($this->evangelist);
         } catch (VeryLowContributionException $e) {
-            return $e->respond();
+            return $e->message();
         }
 
         return $response;

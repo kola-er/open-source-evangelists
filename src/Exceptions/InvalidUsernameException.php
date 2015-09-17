@@ -17,7 +17,7 @@ class InvalidUsernameException extends \Exception
      * @param  string $username Supply the username searched for on GitHub
      * @return string Notification of unregistered username on GitHub supplied
      */
-    public function respond($username)
+    public function message($username)
     {
         return 'Sorry, ' . $username . ' is not registered on GitHub!';
     }

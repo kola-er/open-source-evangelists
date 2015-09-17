@@ -26,7 +26,7 @@ class VeryLowContributionException extends \Exception
      *
      * @return string Notification of very low open-source contribution on GitHub
      */
-    public function respond()
+    public function message()
     {
         return 'So sad!!! You have a very low contribution to open-source. You need ' . (5 - $this->publicRepos) . ' of your work left to be added to your public repo to become a Junior Evangelist.';
     }

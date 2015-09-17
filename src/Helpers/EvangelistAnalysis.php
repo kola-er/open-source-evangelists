@@ -32,9 +32,9 @@ class EvangelistAnalysis
         try {
             $publicRepos = EvangelistFetch::getNumOfPublicRepos($username);
         } catch (EmptyUsernameException $e) {
-            return $e->respond();
+            return $e->message();
         } catch (InvalidUsernameException $e) {
-            return $e->respond($username);
+            return $e->message($username);
         }
 
         if ($publicRepos >= 21) {

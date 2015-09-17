@@ -18,7 +18,7 @@ class EmptyUsernameException extends \Exception
      *
      * @return string Notification of empty username supplied
      */
-    public function respond()
+    public function message()
     {
         return RESPONSE;
     }
