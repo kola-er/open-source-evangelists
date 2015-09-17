@@ -1,6 +1,6 @@
 <?php
 /**
- * This package tests the class Evangelist.
+ * This package tests the EvangelistAnalysis Helper class.
  *
  * @package Kola\OpenSourceEvangelist\Test\EvangelistTest
  * @author  Kolawole ERINOSO <kola.erinoso@gmail.com>
@@ -9,10 +9,10 @@
 
 namespace Kola\OpenSourceEvangelist\Test;
 
-use Kola\OpenSourceEvangelist\Evangelist;
-use Kola\OpenSourceEvangelist\Helper\EvangelistFetch;
+use Kola\OpenSourceEvangelist\Helper\EvangelistAnalysis;
+//use Kola\OpenSourceEvangelist\Exception\VeryLowContributionException;
 
-class EvangelistTest extends \PHPUnit_Framework_TestCase
+class EvangelistAnalysisTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Hold array of dummy data to be used for the test
@@ -25,14 +25,13 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
             ['andela-ooduye', 'Damn It!!! Please make the world better, Oh Ye Prodigal Evangelist.'],
             ['andela-amaborukoje', 'Keep Up The Good Work, I crown you Associate Evangelist.'],
             ['andela-smartins', 'Yeah, I crown you Most Senior Evangelist. Thanks for making the world a better place.'],
-            ['andela-kerinoso', 'So sad!!! You have a very low contribution to open-source. You need ' . (5 - EvangelistFetch::getNumOfPublicRepos('andela-kerinoso')) . ' of your work left to be added to your public repo to become a Junior Evangelist.'],
             ['', 'GitHub username cannot be blank!!!'],
-            ['njfjffojirfjnknv', 'Sorry, njfjffojirfjnknv is not registered on GitHub!']
+            ['njfjffojirfjnknv', 'Sorry, njfjffojirfjnknv is not registered on GitHub!'],
         ];
     }
 
     /**
-     * Test for the equality between the expected values and actual values returned by function getStatus()
+     * Test for the equality between the expected values and actual values returned by function analyse()
      *
      * @param        string $username Username of an individual to be searched for on GitHub
      * @param        string $response Expected category response
@@ -40,8 +39,16 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetStatusOfEvangelist($username, $response)
     {
-        $status = new Evangelist($username);
-        
-        $this->assertEquals($response, $status->getStatus());
+        $this->assertEquals($response, EvangelistAnalysis::analyse($username));
     }
+
+//    /**
+//     * Test for throw of VeryLowContributionException if an individual has less than 5 public repositories on GitHub
+//     *
+//     * @expectedException VeryLowContributionException
+//     */
+//    public function testWithUserWithVeryLowPublicRepos()
+//    {
+//        EvangelistAnalysis::analyse('andela-kerinoso');
+//    }
 }
