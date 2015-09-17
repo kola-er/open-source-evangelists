@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/andela-kerinoso/open-source-evangelists.svg)](https://travis-ci.org/andela-kerinoso/open-source-evangelists)
 
-> This package aims to provide an analysis based on the number of open-source projects an individual possess on GitHub. An individual is ranked according to this category:
+> This package encourages programmers to contribute more to open source by ranking an individual based on the number of public repositories s(he) possesses on GitHub. An individual is ranked to one of these categories:
 
 > 5 <= Junior Evangelist <= 10
 >
