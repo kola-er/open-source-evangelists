@@ -19,13 +19,13 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
      *
      * @return array Set of dummy data for the test
      */
-    public function Inputs()
+    public function supplyUsername()
     {
         return [
-            ['andela-ooduye', 'Damn It!!! Please make the world better, Oh Ye Prodigal Evangelist.'],
-            ['andela-amaborukoje', 'Keep Up The Good Work, I crown you Associate Evangelist.'],
-            ['andela-smartins', 'Yeah, I crown you Most Senior Evangelist. Thanks for making the world a better place.'],
-            ['andela-kerinoso', 'So sad!!! You have a very low contribution to open-source. You need ' . (5 - EvangelistFetch::getNumOfPublicRepos('andela-kerinoso')) . ' of your work left to be added to your public repo to become a Junior Evangelist.'],
+            ['andela-vdugeri', 'Damn It!!! Please make the world better, Oh Ye Prodigal Evangelist.'],
+            ['andela-doladosu', 'Keep Up The Good Work, I crown you Associate Evangelist.'],
+            ['andela-oadebayo', 'Yeah, I crown you Most Senior Evangelist. Thanks for making the world a better place.'],
+            ['andela-cijeomah', 'So sad!!! You have a very low contribution to open-source. You need ' . (5 - EvangelistFetch::getNumOfPublicRepos('andela-cijeomah')) . ' of your work left to be added to your public repo to become a Junior Evangelist.'],
             ['', 'GitHub username cannot be blank!!!'],
             ['njfjffojirfjnknv', 'Sorry, njfjffojirfjnknv is not registered on GitHub!']
         ];
@@ -34,9 +34,7 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
     /**
      * Test for the equality between the expected values and actual values returned by function getStatus()
      *
-     * @param        string $username Username of an individual to be searched for on GitHub
-     * @param        string $response Expected category response
-     * @dataProvider Inputs
+     * @dataProvider supplyUsername
      */
     public function testGetStatusOfEvangelist($username, $response)
     {
