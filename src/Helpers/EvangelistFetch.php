@@ -33,7 +33,7 @@ class EvangelistFetch
 
         curl_setopt_array(
             $user, [
-            CURLOPT_URL => 'https://api.github.com/users/' . $username,
+            CURLOPT_URL => 'https://api.github.com/users/' . $username. '?client_id=513ce061270c479165f3&client_secret=0e8fdd973d153045631b0710db2a0339c3d0d90d',
             CURLOPT_USERAGENT => 'Open-source Evangelist',
             CURLOPT_RETURNTRANSFER => 1
             ]
