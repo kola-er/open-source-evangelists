@@ -10,8 +10,8 @@
 namespace Kola\OpenSourceEvangelist\Test;
 
 use Kola\OpenSourceEvangelist\Helper\EvangelistFetch;
-use Kola\OpenSourceEvangelist\Exception\EmptyUsernameException;
-use Kola\OpenSourceEvangelist\Exception\InvalidUsernameException;
+//use Kola\OpenSourceEvangelist\Exception\EmptyUsernameException;
+//use Kola\OpenSourceEvangelist\Exception\InvalidUsernameException;
 
 class EvangelistFetchTest extends \PHPUnit_Framework_TestCase
 {
@@ -42,23 +42,23 @@ class EvangelistFetchTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($response, EvangelistFetch::getNumOfPublicRepos($username));
     }
 
-    //    /**
-    //     * Test for throw of EmptyUsernameException if the supplied username is empty
-    //     *
-    //     * @expectedException EmptyUsernameException
-    //     */
-    //    public function testSupplyOfEmptyUsername()
-    //    {
-    //        EvangelistFetch::getNumOfPublicRepos('');
-    //    }
-    //
-    //    /**
-    //     * Test for throw of InvalidUsernameException if unregistered username on GitHub is supplied
-    //     *
-    //     * @expectedException InvalidUsernameException
-    //     */
-    //    public function testSupplyOfInvalidUsername()
-    //    {
-    //        EvangelistFetch::getNumOfPublicRepos('njfjffojirfjnknv');
-    //    }
+//    /**
+//     * Test for throw of EmptyUsernameException if the supplied username is empty
+//     *
+//     * @expectedException EmptyUsernameException
+//     */
+//    public function testSupplyOfEmptyUsername()
+//    {
+//        EvangelistFetch::getNumOfPublicRepos('');
+//    }
+
+//    /**
+//     * Test for throw of InvalidUsernameException if unregistered username on GitHub is supplied
+//     *
+//     * @expectedException InvalidUsernameException
+//     */
+//    public function testSupplyOfInvalidUsername()
+//    {
+//        EvangelistFetch::getNumOfPublicRepos('njfjffojirfjnknv');
+//    }
 }

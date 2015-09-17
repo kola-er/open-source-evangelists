@@ -10,7 +10,7 @@
 namespace Kola\OpenSourceEvangelist\Test;
 
 use Kola\OpenSourceEvangelist\Helper\EvangelistAnalysis;
-use Kola\OpenSourceEvangelist\Exception\VeryLowContributionException;
+//use Kola\OpenSourceEvangelist\Exception\VeryLowContributionException;
 
 class EvangelistAnalysisTest extends \PHPUnit_Framework_TestCase
 {
@@ -42,13 +42,13 @@ class EvangelistAnalysisTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($response, EvangelistAnalysis::analyse($username));
     }
 
-    //    /**
-    //	 * Test for throw of VeryLowContributionException if an individual has less than 5 public repositories on GitHub
-    //	 *
-    //     * @expectedException VeryLowContributionException
-    //     */
-    //    public function testWithUserWithVeryLowPublicRepos()
-    //    {
-    //        EvangelistAnalysis::analyse('andela-kerinoso');
-    //    }
+//    /**
+//     * Test for throw of VeryLowContributionException if an individual has less than 5 public repositories on GitHub
+//     *
+//     * @expectedException VeryLowContributionException
+//     */
+//    public function testWithUserWithVeryLowPublicRepos()
+//    {
+//        EvangelistAnalysis::analyse('andela-kerinoso');
+//    }
 }

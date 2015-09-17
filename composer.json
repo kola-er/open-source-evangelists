@@ -19,13 +19,13 @@
   "autoload": {
     "psr-4": {
       "Kola\\": "src/"
-    }
+    },
+    "classmap": ["src/"]
   },
   "autoload-dev": {
     "psr-4": {
       "Kola\\OpenSourceEvangelist\\Test\\": "tests/"
-    },
-    "classmap": ["src/"]
+    }
   },
   "require": {
     "php": ">=5.5",
