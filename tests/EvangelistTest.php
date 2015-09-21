@@ -25,7 +25,7 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
             ['andela-vdugeri', 'Damn It!!! Please make the world better, Oh Ye Prodigal Evangelist.'],
             ['andela-doladosu', 'Keep Up The Good Work, I crown you Associate Evangelist.'],
             ['andela-oadebayo', 'Yeah, I crown you Most Senior Evangelist. Thanks for making the world a better place.'],
-            ['andela-cijeomah', 'So sad!!! You have a very low contribution to open-source. You need ' . (5 - EvangelistFetch::getNumOfPublicRepos('andela-cijeomah')) . ' of your work left to be added to your public repo to become a Junior Evangelist.'],
+            ['andela-kerinoso', 'So sad!!! You have a very low contribution to open-source. You need ' . (5 - EvangelistFetch::getNumOfPublicRepos('andela-kerinoso')) . ' of your work left to be added to your public repo to become a Junior Evangelist.'],
             ['', 'GitHub username cannot be blank!!!'],
             ['njfjffojirfjnknv', 'Sorry, njfjffojirfjnknv is not registered on GitHub!']
         ];
