@@ -1,6 +1,5 @@
 {
-  "name": "league/open-source-evangelists",
-  "version": "1.0.0",
+  "name": "kola/open-source-evangelists",
   "description": "Analyses the contribution of an individual to open-source on GitHub.",
   "keywords": [
     "evangelist",
