@@ -9,10 +9,10 @@
 
 namespace Kola\OpenSourceEvangelist\Exception;
 
-define('RESPONSE', 'GitHub username cannot be blank!!!');
-
 class EmptyUsernameException extends \Exception
 {
+	const RESPONSE = 'GitHub username cannot be blank!!!';
+
     /**
      * Handle empty username
      *
@@ -20,6 +20,6 @@ class EmptyUsernameException extends \Exception
      */
     public function message()
     {
-        return RESPONSE;
+        return self::RESPONSE;
     }
 }

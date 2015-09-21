@@ -14,12 +14,12 @@ use Kola\OpenSourceEvangelist\Exception\EmptyUsernameException;
 use Kola\OpenSourceEvangelist\Exception\InvalidUsernameException;
 use Kola\OpenSourceEvangelist\Exception\VeryLowContributionException;
 
-define('SENIOR_RESPONSE', 'Yeah, I crown you Most Senior Evangelist. Thanks for making the world a better place.');
-define('INTERMEDIATE_RESPONSE', 'Keep Up The Good Work, I crown you Associate Evangelist.');
-define('JUNIOR_RESPONSE', 'Damn It!!! Please make the world better, Oh Ye Prodigal Evangelist.');
-
 class EvangelistAnalysis
 {
+    const SENIOR_RESPONSE = 'Yeah, I crown you Most Senior Evangelist. Thanks for making the world a better place.';
+    const INTERMEDIATE_RESPONSE = 'Keep Up The Good Work, I crown you Associate Evangelist.';
+    const JUNIOR_RESPONSE = 'Damn It!!! Please make the world better, Oh Ye Prodigal Evangelist.';
+
     /**
      * Process the data on an individual's username got from GitHub
      *
@@ -38,11 +38,11 @@ class EvangelistAnalysis
         }
 
         if ($publicRepos >= 21) {
-            return SENIOR_RESPONSE;
+            return self::SENIOR_RESPONSE;
         } elseif ($publicRepos >= 11) {
-            return INTERMEDIATE_RESPONSE;
+            return self::INTERMEDIATE_RESPONSE;
         } elseif ($publicRepos >= 5) {
-            return JUNIOR_RESPONSE;
+            return self::JUNIOR_RESPONSE;
         } else {
             throw new VeryLowContributionException($publicRepos);
         }
