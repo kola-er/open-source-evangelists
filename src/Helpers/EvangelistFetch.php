@@ -29,6 +29,9 @@ class EvangelistFetch
             throw new EmptyUsernameException;
         }
 
+		$dotenv = new \Dotenv\Dotenv(__DIR__ . '/../../');
+		$dotenv->load();
+
         $user = curl_init();
 
         curl_setopt_array(
