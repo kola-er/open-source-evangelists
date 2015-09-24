@@ -4,11 +4,11 @@
 
 > This package encourages programmers to contribute more to open source by ranking an individual based on the number of public repositories s(he) possesses on GitHub. An individual is ranked to one of these categories:
 
-> 5 <= Junior Evangelist <= 10
+> >= 5 and <= 10        Junior Evangelist
 >
-> 11 <= Associate Evangelist <= 20
+> >= 11 and <= 20       Associate Evangelist
 >
-> 21 <= Most Senior Evangelist
+> >= 21                 Most Senior Evangelist
 
 ## Installation
 
