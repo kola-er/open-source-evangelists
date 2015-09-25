@@ -17,7 +17,7 @@ This package encourages programmers to contribute more to open source by ranking
 Via Composer
 
 ``` bash
-$ composer require league/open-source-evangelist
+$ composer require kola/open-source-evangelists
 ```
 
 ``` bash
