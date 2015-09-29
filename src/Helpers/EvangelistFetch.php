@@ -10,6 +10,7 @@
 
 namespace Kola\OpenSourceEvangelist\Helper;
 
+use Dotenv\Dotenv;
 use Kola\OpenSourceEvangelist\Exception\EmptyUsernameException;
 use Kola\OpenSourceEvangelist\Exception\InvalidUsernameException;
 
@@ -29,8 +30,7 @@ class EvangelistFetch
             throw new EmptyUsernameException;
         }
 
-		$dotenv = new \Dotenv\Dotenv(__DIR__ . '/../../');
-		$dotenv->load();
+		self::loadDotenv();
 
         $user = curl_init();
 
@@ -52,5 +52,11 @@ class EvangelistFetch
         }
         
         return $result['public_repos'];
+    }
+
+    public function loadDotenv()
+    {
+		$dotenv = new Dotenv(__DIR__ . '/../../');
+		$dotenv->load();
     }
 }
