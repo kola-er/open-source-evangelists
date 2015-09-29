@@ -30,7 +30,7 @@ class EvangelistFetch
             throw new EmptyUsernameException;
         }
 
-		self::loadDotenv();
+		static::loadDotenv();
 
         $user = curl_init();
 
@@ -54,7 +54,7 @@ class EvangelistFetch
         return $result['public_repos'];
     }
 
-    public function loadDotenv()
+    public static function loadDotenv()
     {
 		$dotenv = new Dotenv(__DIR__ . '/../../');
 		$dotenv->load();
