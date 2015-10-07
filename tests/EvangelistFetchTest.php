@@ -21,7 +21,7 @@ class EvangelistFetchTest extends \PHPUnit_Framework_TestCase
     public function supplyValidUsername()
     {
         return [
-            ['andela-vdugeri', 12],
+            ['andela-sakande', 7],
             ['andela-doladosu', 17],
             ['andela-oadebayo', 23],
             ['andela-kerinoso', 3]

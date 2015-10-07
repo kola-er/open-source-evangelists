@@ -22,7 +22,7 @@ class EvangelistAnalysisTest extends \PHPUnit_Framework_TestCase
     public function inputs()
     {
         return [
-            ['andela-vdugeri', 'Damn It!!! Please make the world better, Oh Ye Prodigal Evangelist.'],
+            ['andela-sakande', 'Damn It!!! Please make the world better, Oh Ye Prodigal Evangelist.'],
             ['andela-doladosu', 'Keep Up The Good Work, I crown you Associate Evangelist.'],
             ['andela-oadebayo', 'Yeah, I crown you Most Senior Evangelist. Thanks for making the world a better place.'],
             ['', 'GitHub username cannot be blank!!!'],
