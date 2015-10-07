@@ -10,7 +10,6 @@
 namespace Kola\OpenSourceEvangelist\Test;
 
 use Kola\OpenSourceEvangelist\Helper\EvangelistFetch;
-use \Exception;
 
 class EvangelistFetchTest extends \PHPUnit_Framework_TestCase
 {
@@ -22,8 +21,8 @@ class EvangelistFetchTest extends \PHPUnit_Framework_TestCase
     public function supplyValidUsername()
     {
         return [
-            ['andela-vdugeri', 10],
-            ['andela-doladosu', 15],
+            ['andela-vdugeri', 12],
+            ['andela-doladosu', 17],
             ['andela-oadebayo', 23],
             ['andela-kerinoso', 3]
         ];
@@ -46,23 +45,46 @@ class EvangelistFetchTest extends \PHPUnit_Framework_TestCase
      *
      * @return array Set of dummy data for the test
      */
-    public function supplyInvalidUsername()
+    public function supplyEmptyUsername()
     {
         return [
-            [''],
-            ['njfjffojirfjnknv']
+            ['']
         ];
     }
 
     /**
-     * Test for throw of Exception if the supplied username is empty or invalid
+     * Test for throw of EmptyUsernameException if the supplied username is empty
      *
      * @param        string $username Username of an individual to be searched for on GitHub
-     * @dataProvider supplyInvalidUsername
-     * @expectedException Exception
+     * @dataProvider supplyEmptyUsername
      */
-    public function testSupplyOfEmptyAndInvalidUsername($username)
+    public function testSupplyOfEmpty($username)
     {
+		$this->setExpectedException('Kola\OpenSourceEvangelist\Exception\EmptyUsernameException');
         EvangelistFetch::getNumOfPublicRepos($username);
     }
+
+	/**
+	 * Hold array of dummy data to be used for the test
+	 *
+	 * @return array Set of dummy data for the test
+	 */
+	public function supplyInvalidUsername()
+	{
+		return [
+            ['njfjffojirfjnknv']
+		];
+	}
+
+	/**
+	 * Test for throw of InvalidUsernameException if the supplied username is invalid
+	 *
+	 * @param        string $username Username of an individual to be searched for on GitHub
+	 * @dataProvider supplyInvalidUsername
+	 */
+	public function testSupplyOfInvalidUsername($username)
+	{
+		$this->setExpectedException('Kola\OpenSourceEvangelist\Exception\InvalidUsernameException');
+		EvangelistFetch::getNumOfPublicRepos($username);
+	}
 }
